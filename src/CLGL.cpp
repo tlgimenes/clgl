@@ -116,11 +116,6 @@ void CLGL::CLGLBuildProgramSource(std::string programName)
   return;
 }
 
-cl::Program CLGL::GetProgram(void)
-{
-  return this->program;
-}
-
 std::vector<cl::Kernel>::iterator CLGL::CLGLBuildKernel(std::string kernelFunctionName)
 {
   std::vector<cl::Kernel>::iterator pos;

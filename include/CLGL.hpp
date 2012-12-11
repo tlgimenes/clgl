@@ -41,7 +41,6 @@ class CLGL
 
   public: 
     CLGL();
-    cl::Program GetProgram(void);
     virtual void CLGLCreateContext(void){};
     void CLGLCreateCommandQueue(void);
     void CLGLBuildProgramSource(std::string programName, std::string compilerFlags);
