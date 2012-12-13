@@ -20,19 +20,16 @@
 #include <sstream>
 #include <iomanip>
 #include <math.h>
+#include <string>
 
 #include "GL/glut.h"
-
-#define NUM_PARTICLES 2000
-
 #include "CL/cl.hpp"
-
 #include "CLGL.hpp"
 
 class CLGLLinux: public CLGL
 { 
   public:
-    CLGLLinux(int argc, char * argv[]);
+    CLGLLinux(int argc, char * argv[], std::string ss);
     void CLGLCreateContext(void);
 };
 
