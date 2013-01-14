@@ -5,14 +5,22 @@
 //                                //
 //--------------------------------//
 
-#ifndef CLGLFACTORYLINUX_HPP
-#define CLGLFACTORYLINUX_HPP
+// Allow Exceptions
+#ifndef __CL_ENABLE_EXCEPTIONS
+#define __CL_ENABLE_EXCEPTIONS
+#endif
 
-#include "CLGLFactory.hpp"
+#ifndef CLGLERROR_HPP
+#define CLGLERROR_HPP
 
-class CLGLFactoryLinux: public CLGLFactory {
+#include <string>
+
+#include <CL/cl.hpp>
+
+class CLGLError
+{
   public:
-    CLGL* instanciateCLGL(int argc, char * argv[], std::string windowTitle);  
+    static std::string * errToStr(int err);
 };
 
 #endif

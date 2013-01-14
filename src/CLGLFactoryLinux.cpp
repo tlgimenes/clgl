@@ -5,12 +5,10 @@
 //                                //
 //--------------------------------//
 
-#include "CLGLSim.hpp"
+#include <string>
+#include "CLGLLinux.hpp"
+#include "CLGLFactoryLinux.hpp"
 
-int CLGLSim::ParticlesNum = 0;
-std::vector<int> *CLGLSim::vbo = NULL;
-
-void CLGLSim::CLGLRunKernel(void)
-{
-  return;
+CLGL* CLGLFactoryLinux::instanciateCLGL(void){
+  return new CLGLLinux();
 }

@@ -5,11 +5,15 @@
 //                                //
 //--------------------------------//
 
-__kernel void hello(__global char* string)
-{
-  size_t cur = get_global_id(0);
-  
-  string[cur] += 1;
+#ifndef CL_GLFACTORY_HPP
+#define CL_GLFACTORY_HPP
 
-  return;
-}
+#include "CLGLError.hpp"
+#include "CLGL.hpp"
+
+class CLGLFactory { 
+  public:
+    virtual CLGL* instanciateCLGL(void){return NULL;}
+};
+
+#endif

@@ -14,6 +14,8 @@
 #define CLGLLinux_HPP
 
 #include <GL/glew.h>
+#include <GL/glut.h>
+#include <CL/cl.hpp>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,23 +24,16 @@
 #include <math.h>
 #include <string>
 
-#include "GL/glut.h"
-#include "CL/cl.hpp"
+#include "CLGLError.hpp"
 #include "CLGL.hpp"
 
 class CLGLLinux: public CLGL
-{ 
-  public:
-    CLGLLinux(int argc, char * argv[], std::string ss);
+{
+  protected:
     void CLGLCreateContext(void);
+    void CLGLCreateCommandQueue(void);
+  public:
+    CLGLLinux(void);
 };
-
-void appRender();
-void init_gl(int argc, char** argv);
-void appDestroy(void);
-void timerCB(int ms);
-void appKeyboard(unsigned char key, int x, int y);
-void appMouse(int button, int state, int x, int y);
-void appMotion(int x, int y);
 
 #endif

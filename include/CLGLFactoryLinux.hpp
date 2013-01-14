@@ -5,18 +5,15 @@
 //                                //
 //--------------------------------//
 
-#ifndef CLGLSIM_HPP
-#define CLGLSIM_HPP
+#ifndef CLGLFACTORYLINUX_HPP
+#define CLGLFACTORYLINUX_HPP
 
-#include <vector>
-#include <stdlib.h>
+#include "CLGLError.hpp"
+#include "CLGLFactory.hpp"
 
-class CLGLSim
-{
+class CLGLFactoryLinux: public CLGLFactory {
   public:
-    static int ParticlesNum;
-    static std::vector<int> *vbo;
-    static void CLGLRunKernel(void);
+    CLGL* instanciateCLGL(void);  
 };
 
 #endif

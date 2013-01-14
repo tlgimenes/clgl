@@ -1,7 +1,7 @@
 SHELL=/bin/bash
 CC=g++
 C_FLAGS=-g -c -Wall -O0
-SRC=CLGL.cpp CLGLLinux.cpp CLGLFactoryLinux.cpp
+SRC=CLGLError.cpp CLGL.cpp CLGLLinux.cpp CLGLFactoryLinux.cpp
 OBJ=$(SRC:.cpp=.o)
 
 CL_PATH_ATI=/opt/AMDAPP/include/
